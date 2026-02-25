@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Cores Semânticas ContentFlow */
+  --color-primary: #4F8EF7;
+  --color-success: #22C55E;
+  --color-warning: #F7C948;
+  --color-alert: #F97316;
+  --color-info: #4ECDC4;
+  --color-creative: #A78BFA;
+  --color-danger: #EF4444;
+  --color-neutral: #6B7280;
+
+  /* Background e superfícies */
+  --background: #0A0A0F;
+  --surface: #111118;
+  --border: #1E1E2E;
+  --foreground: #FFFFFF;
+
+  /* Espaçamento Semântico */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+
+/* Status Semantic utility classes */
+.status-idea {
+  color: var(--color-neutral);
+  border-color: var(--color-neutral);
+}
+
+.status-script {
+  color: var(--color-warning);
+  border-color: var(--color-warning);
+}
+
+.status-production {
+  color: var(--color-alert);
+  border-color: var(--color-alert);
+}
+
+.status-scheduled {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.status-published {
+  color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+/* Category Semantic utility classes */
+.cat-educational {
+  color: var(--color-primary);
+}
+
+.cat-promotional {
+  color: var(--color-warning);
+}
+
+.cat-engagement {
+  color: var(--color-info);
+}
+
+.cat-institutional {
+  color: var(--color-creative);
+}
+
+.cat-bts {
+  color: var(--color-alert);
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-[#4F8EF7] to-[#A78BFA] text-white font-bold py-2 px-6 rounded-lg transition-all hover:opacity-90 active:scale-95;
+  }
+
+  .card-post {
+    @apply bg-[#111118] border border-transparent hover:border-[#1E1E2E] rounded-xl p-4 transition-all duration-300;
+  }
+
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/20;
+  }
+}
