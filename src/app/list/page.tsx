@@ -1,5 +1,7 @@
 "use client"
 
+export const dynamic = 'force-dynamic'
+
 import { useState, useEffect } from "react"
 import { List, Search, Filter, MoreHorizontal, MessageCircle, Heart, Share2 } from "lucide-react"
 import { StatusBadge, CategoryChip } from "@/components/ui/Badges"
