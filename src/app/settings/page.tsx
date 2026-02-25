@@ -74,12 +74,6 @@ export default function SettingsPage() {
         }
     }
 
-    async function handleDisconnect() {
-        if (confirm("Tem certeza que deseja desconectar sua conta do Instagram?")) {
-            setIsConnected(false)
-            alert("Conta desconectada com sucesso!")
-        }
-    }
 
     const tabs = [
         { id: 'profile', label: 'Perfil', icon: User },
